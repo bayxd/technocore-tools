@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Identity / secrets — NEVER commit these
+identity.pem
+*.pem
+*.passphrase*
+.flop_*
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output
+*.log
+output/
