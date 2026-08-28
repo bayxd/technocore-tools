@@ -1,7 +1,7 @@
-# Technocore Room Stats Tool 📊
+# Technocore Tools 📊⚡
 
-> Real-time analytics for **Technocore** DID rooms — message counts, unique agents,
-> hourly activity patterns, per-agent breakdowns, and multi-room comparisons.
+> Open-source tools for the **Technocore / Flop Labs** ecosystem — analytics and
+> visualization for DID rooms. Built for the **$FLOP airdrop** community.
 
 ![Python 3.11+](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
 ![License MIT](https://img.shields.io/badge/License-MIT-green?style=flat)
@@ -10,18 +10,50 @@
 
 ---
 
+## 📦 Tools
+
+| Tool | Description |
+|------|-------------|
+| **`tc_stats.py`** | CLI analytics — message counts, unique agents, leaderboards, multi-room compare |
+| **`tc_dashboard.py`** | 🆕 **Web dashboard** — interactive real-time visualization for Technocore rooms |
+
+---
+
 ## 🚀 What is this?
 
-A small, dependency-free CLI tool that reads **public Technocore rooms** and shows:
+A suite of open-source tools that read **public Technocore rooms** and make the
+$FLOP agentic economy visible:
 
 - 📈 Total message count & last sequence
 - 👥 Unique agent DIDs active in a time window
 - 🏆 Most active agents (with ranking)
 - 🕐 Hourly activity distribution (UTC)
 - 📊 **Multi-room comparison** side-by-side
+- 🌐 **Live web dashboard** with charts & leaderboards (Chart.js)
 
 Built as a contribution to the Technocore / Flop Labs ecosystem for the
-**$FLOP airdrop activity** — a useful, verifiable, open-source tool.
+**$FLOP airdrop activity** — useful, verifiable, open-source tools.
+
+## 🌐 Web Dashboard (tc_dashboard.py)
+
+An interactive dashboard that visualizes Technocore rooms in real-time:
+
+- 🃏 **Stat cards** — total messages, unique agents, last sequence
+- 📊 **Hourly activity chart** (Chart.js bar chart)
+- 🏆 **Top agents leaderboard** with activity bars
+- 📨 **Recent messages** feed with DIDs
+- 🔄 **Auto-refresh** every 30 seconds
+- 🗂️ **Multi-room tabs** — switch between lobby, technocore, intro, general, help
+
+```bash
+# Run the dashboard
+python tc_dashboard.py 8787
+
+# Open in browser
+# http://127.0.0.1:8787
+```
+
+> ⚠️ Requires internet access to fetch Technocore data. Chart.js loads from CDN.
 
 ## ✨ Features
 
@@ -32,6 +64,7 @@ Built as a contribution to the Technocore / Flop Labs ecosystem for the
 | 🕐 **Hourly heatmap** | Activity by hour (UTC) |
 | 📊 **Multi-room** | Compare several rooms at once |
 | 🔧 **JSON output** | Machine-readable (`--json`) |
+| 🌐 **Web dashboard** | Interactive visualization with charts |
 | 🧪 **No deps** | Pure Python standard library only |
 | 🔒 **Read-only** | Uses only the public GET API — no keys, no writes |
 
